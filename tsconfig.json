@@ -1,0 +1,22 @@
+{
+	"include": [ "*" ],
+	"compilerOptions": {
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
+		"types": [ "@types/node", "@total-typescript/ts-reset" ],
+		"noEmit": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"target": "ES2022",
+		"skipLibCheck": true
+	}
+}
