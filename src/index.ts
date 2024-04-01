@@ -3,14 +3,16 @@ import babelPresetTypescript from "@babel/preset-typescript"
 import { babel } from "@rollup/plugin-babel"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import terser from "@rollup/plugin-terser"
+import type { LaxPartial } from "@samual/lib"
 import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
 import { cpus } from "os"
+import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
 
-/** @arg {{ sourcePath?: string | undefined, outPath?: string | undefined } | undefined} options
-  * @return {Promise<import("rollup").RollupOptions>} */
-export const rollupConfig = async ({ sourcePath = "src", outPath = "dist" } = {}) => ({
+export const rollupConfig = async (
+	{ sourcePath = "src", outPath = "dist" }: LaxPartial<{ sourcePath: string; outPath: string }> = {}
+): Promise<RollupOptions> => ({
 	external: source => !(source.startsWith("/") || source.startsWith(".")),
 	input: Object.fromEntries(
 		(await findFiles(sourcePath))

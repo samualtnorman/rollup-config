@@ -31,11 +31,12 @@
 		"@rollup/plugin-babel": "^6.0.4",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
-		"@samual/lib": "^0.10.0",
+		"@samual/lib": "0.11.0-e3b2e76",
 		"babel-plugin-here": "^1.0.0",
 		"rollup-plugin-prettier": "^4.1.1"
 	},
 	"devDependencies": {
+		"@samual/rollup-config": "^0.0.0",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/babel__preset-env": "^7.9.6",
 		"@types/node": "^18.19.28",
