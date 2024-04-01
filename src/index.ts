@@ -56,5 +56,5 @@ export const rollupConfig = async (
 	],
 	preserveEntrySignatures: "allow-extension",
 	strictDeprecations: true,
-	treeshake: { moduleSideEffects: false },
+	treeshake: { moduleSideEffects: false }
 })
