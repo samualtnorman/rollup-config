@@ -26,6 +26,9 @@ dependencies:
   babel-plugin-here:
     specifier: ^1.0.0
     version: 1.0.0
+  babel-plugin-vitest:
+    specifier: ^0.0.0
+    version: 0.0.0
   rollup-plugin-prettier:
     specifier: ^4.1.1
     version: 4.1.1(prettier@3.2.5)(rollup@4.13.2)
@@ -1480,6 +1483,13 @@ packages:
       '@babel/helper-define-polyfill-provider': 0.6.1(@babel/core@7.24.3)
     transitivePeerDependencies:
       - supports-color
+
+  /babel-plugin-vitest@0.0.0:
+    resolution: {integrity: sha512-Sd319TUmXTYpw13V12e1hzdJSuMeXAkHRru7HI4SWyMi+J+xfhVGEN+Uxd9Hi3j3dSrIv0xdYvm78uKf6RpThQ==}
+    engines: {node: ^18 || >=20}
+    dependencies:
+      '@babel/types': 7.24.0
+    dev: false
 
   /browserslist@4.23.0:
     resolution: {integrity: sha512-QW8HiM1shhT2GuzkvklfjcKDiWFXHOeFCIA/huJPwHsslwcydgk7X+z2zXpEijP98UCY7HbubZt5J2Zgvf0CaQ==}

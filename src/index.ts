@@ -9,6 +9,7 @@ import { babelPluginHere } from "babel-plugin-here"
 import { cpus } from "os"
 import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
+import { babelPluginVitest } from "babel-plugin-vitest"
 
 export const rollupConfig = async (
 	{ sourcePath = "src", outPath = "dist" }: LaxPartial<{ sourcePath: string; outPath: string }> = {}
@@ -34,7 +35,7 @@ export const rollupConfig = async (
 				],
 				[ babelPresetTypescript, { allowDeclareFields: true, optimizeConstEnums: true } ]
 			],
-			plugins: [ babelPluginHere() ]
+			plugins: [ babelPluginHere(), babelPluginVitest() ]
 		}),
 		nodeResolve({ extensions: [ ".ts" ] }),
 		terser({
