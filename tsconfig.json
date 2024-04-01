@@ -1,5 +1,5 @@
 {
-	"include": [ "*" ],
+	"include": [ "*", "src/env.d.ts" ],
 	"compilerOptions": {
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
