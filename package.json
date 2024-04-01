@@ -23,7 +23,8 @@
 	"scripts": {
 		"build": "./rollup.config.js",
 		"emit-declarations": "tsc --project src --declaration --emitDeclarationOnly --noEmit false --outDir dist",
-		"package": "rm -rf dist && pnpm build && pnpm emit-declarations && scripts/emit-package-json.js && cp license readme.md dist"
+		"package": "rm -rf dist && pnpm build && pnpm emit-declarations && scripts/emit-package-json.js && cp license readme.md dist",
+		"lint": "tsc && tsc --project src"
 	},
 	"dependencies": {
 		"@babel/preset-env": "^7.24.3",
