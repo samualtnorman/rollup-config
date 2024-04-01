@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^7.9.6
     version: 7.9.6
   '@types/node':
-    specifier: ^20.12.2
-    version: 20.12.2
+    specifier: ^18.19.28
+    version: 18.19.28
   rollup:
     specifier: ^4.13.2
     version: 4.13.2
@@ -1501,8 +1501,8 @@ packages:
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
-  /@types/node@20.12.2:
-    resolution: {integrity: sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==}
+  /@types/node@18.19.28:
+    resolution: {integrity: sha512-J5cOGD9n4x3YGgVuaND6khm5x07MMdAKkRyXnjVR6KFhLMNh2yONGiP7Z+4+tBOt5mK+GvDTiacTOVGGpqiecw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
