@@ -32,8 +32,8 @@
 		"@rollup/plugin-babel": "^6.0.4",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
-		"@samual/lib": "0.11.0-e3b2e76",
-		"babel-plugin-here": "1.1.0-3e07890",
+		"@samual/lib": "0.10.1",
+		"babel-plugin-here": "1.0.1",
 		"babel-plugin-vitest": "^0.0.0",
 		"rollup-plugin-prettier": "^4.1.1"
 	},
