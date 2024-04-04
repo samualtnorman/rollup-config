@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@samual/rollup-config':
-    specifier: 0.1.0-dfdeb42
-    version: 0.1.0-dfdeb42(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.14.0)
+    specifier: 0.1.0-7b8aabd
+    version: 0.1.0-7b8aabd(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.14.0)
   '@total-typescript/ts-reset':
     specifier: ^0.5.1
     version: 0.5.1
@@ -1383,13 +1383,8 @@ packages:
     resolution: {integrity: sha512-DW+Cx3RwmvSUvtpcZd7NqUCu4kzCqn/Bs5Ybl4GQSn9XF4hPud+zaEuODNc+g2uLt2jH+8bYuANQGJMaDnSCZQ==}
     engines: {node: ^18 || >=20}
 
-  /@samual/lib@0.11.0-e3b2e76:
-    resolution: {integrity: sha512-2Z7xOEn/o0V+qM4xEIWnmEhSAHGmfXbsH/KZadGR6dX2EBplNlST9Z3xuUH4S7HGo0LU4i7iIx75S0O5rLj92A==}
-    engines: {node: ^18 || >=20}
-    dev: true
-
-  /@samual/rollup-config@0.1.0-dfdeb42(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.14.0):
-    resolution: {integrity: sha512-dliXN4qlaien7zWz/1CSgZnvdnVBpWlDr0UyD8acMjyXnD+EUc3M2wonpVKbXfKe1p9JvogVQMmTYcbxAkkevw==}
+  /@samual/rollup-config@0.1.0-7b8aabd(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.14.0):
+    resolution: {integrity: sha512-nwFgFN7rmlIMxdczbiuT7djs0RVixkGiowVBMzYCDy6FLHCCXjyOGHrOaWhJTzUbeGW/SGH0ogFtNzEyMWEwjg==}
     engines: {node: ^18 || >=20}
     dependencies:
       '@babel/preset-env': 7.24.4(@babel/core@7.24.4)
@@ -1397,8 +1392,8 @@ packages:
       '@rollup/plugin-babel': 6.0.4(@babel/core@7.24.4)(rollup@4.14.0)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.14.0)
       '@rollup/plugin-terser': 0.4.4(rollup@4.14.0)
-      '@samual/lib': 0.11.0-e3b2e76
-      babel-plugin-here: 1.1.0-3e07890
+      '@samual/lib': 0.10.1
+      babel-plugin-here: 1.0.1
       babel-plugin-vitest: 0.0.0
       rollup-plugin-prettier: 4.1.1(prettier@3.2.5)(rollup@4.14.0)
     transitivePeerDependencies:
@@ -1453,14 +1448,6 @@ packages:
     dependencies:
       '@babel/types': 7.24.0
       '@samual/lib': 0.10.1
-    dev: false
-
-  /babel-plugin-here@1.1.0-3e07890:
-    resolution: {integrity: sha512-r/V7gbMuIRWfvI7KrQ3iTZVqjPkfntSlXu+NoyEp2Yz4AkNUEwLiFSTF0cdRv97Voyw7/zBbfNVeGJiw7tW6yg==}
-    dependencies:
-      '@babel/types': 7.24.0
-      '@samual/lib': 0.10.1
-    dev: true
 
   /babel-plugin-polyfill-corejs2@0.4.10(@babel/core@7.24.4):
     resolution: {integrity: sha512-rpIuu//y5OX6jVU+a5BCn1R5RSZYWAl2Nar76iwaOdycqb6JPxediskWFMMl7stfwNJR4b7eiQvh5fB5TEQJTQ==}
