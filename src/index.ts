@@ -1,4 +1,4 @@
-import babelPresetEnv from "@babel/preset-env"
+import babelPresetEnv, { Options as BabelPresetEnvOptions } from "@babel/preset-env"
 import babelPresetTypescript from "@babel/preset-typescript"
 import { babel } from "@rollup/plugin-babel"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
@@ -6,10 +6,10 @@ import terser from "@rollup/plugin-terser"
 import type { LaxPartial } from "@samual/lib"
 import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
+import { babelPluginVitest } from "babel-plugin-vitest"
 import { cpus } from "os"
 import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
-import { babelPluginVitest } from "babel-plugin-vitest"
 
 export const rollupConfig = async (
 	{ sourcePath = "src", outPath = "dist" }: LaxPartial<{ sourcePath: string; outPath: string }> = {}
@@ -31,7 +31,7 @@ export const rollupConfig = async (
 			presets: [
 				[
 					babelPresetEnv,
-					/** @satisfies {import("@babel/preset-env").Options} */({ targets: { node: "18.0" } })
+					{ targets: { node: "18.0" } } satisfies BabelPresetEnvOptions
 				],
 				[ babelPresetTypescript, { allowDeclareFields: true, optimizeConstEnums: true } ]
 			],
