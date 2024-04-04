@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.11.0-e3b2e76
     version: 0.11.0-e3b2e76
   babel-plugin-here:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: 1.1.0-3e07890
+    version: 1.1.0-3e07890
   babel-plugin-vitest:
     specifier: ^0.0.0
     version: 0.0.0
@@ -1382,7 +1382,6 @@ packages:
   /@samual/lib@0.10.1:
     resolution: {integrity: sha512-DW+Cx3RwmvSUvtpcZd7NqUCu4kzCqn/Bs5Ybl4GQSn9XF4hPud+zaEuODNc+g2uLt2jH+8bYuANQGJMaDnSCZQ==}
     engines: {node: ^18 || >=20}
-    dev: true
 
   /@samual/lib@0.11.0-e3b2e76:
     resolution: {integrity: sha512-2Z7xOEn/o0V+qM4xEIWnmEhSAHGmfXbsH/KZadGR6dX2EBplNlST9Z3xuUH4S7HGo0LU4i7iIx75S0O5rLj92A==}
@@ -1394,6 +1393,7 @@ packages:
     engines: {node: '>=20'}
     optionalDependencies:
       valibot: 0.25.0
+    dev: true
 
   /@samual/rollup-config@0.0.0(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.14.0):
     resolution: {integrity: sha512-QYghLTaF8QusBHCzHPj/AF/4ISZyLQOuuf+9Vr6iR+jLsAW1++kz+Gms26FNr5/zb6bkzxWzwOAamC61JrBCFg==}
@@ -1459,6 +1459,14 @@ packages:
     dependencies:
       '@babel/types': 7.24.0
       '@samual/lib': 0.9.1
+    dev: true
+
+  /babel-plugin-here@1.1.0-3e07890:
+    resolution: {integrity: sha512-r/V7gbMuIRWfvI7KrQ3iTZVqjPkfntSlXu+NoyEp2Yz4AkNUEwLiFSTF0cdRv97Voyw7/zBbfNVeGJiw7tW6yg==}
+    dependencies:
+      '@babel/types': 7.24.0
+      '@samual/lib': 0.10.1
+    dev: false
 
   /babel-plugin-polyfill-corejs2@0.4.10(@babel/core@7.24.4):
     resolution: {integrity: sha512-rpIuu//y5OX6jVU+a5BCn1R5RSZYWAl2Nar76iwaOdycqb6JPxediskWFMMl7stfwNJR4b7eiQvh5fB5TEQJTQ==}
@@ -1880,6 +1888,7 @@ packages:
   /valibot@0.25.0:
     resolution: {integrity: sha512-cmD0ca15oyAbT75iYLNW6uU6doAeIwYfOshpXka/E1Bx4frzbkrgb7gvkI7K0YK/DVOksei4FfxWfRoBP3NFTg==}
     requiresBuild: true
+    dev: true
     optional: true
 
   /yallist@3.1.1:
