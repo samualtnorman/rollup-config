@@ -41,7 +41,8 @@ export const rollupConfig = async (
 		terser({
 			compress: { passes: Infinity, unsafe: true, sequences: false },
 			maxWorkers: Math.floor(cpus().length / 2),
-			mangle: false
+			mangle: false,
+			ecma: 2020
 		}),
 		prettier({
 			parser: "espree",
