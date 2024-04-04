@@ -23,7 +23,7 @@ export const rollupConfig = async (
 			)
 			.map(path => [ path.slice(sourcePath.length + 1, -3), path ])
 	),
-	output: { dir: outPath },
+	output: { dir: outPath, preserveModules: true },
 	plugins: [
 		babel({
 			babelHelpers: "bundled",
