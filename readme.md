@@ -1,6 +1,14 @@
 # Samual's Rollup Config
 An opinionated Rollup config.
 
+Requires Node.js 18, 20 or above.
+
+## Install
+```sh
+npm install @samual/cookie
+```
+
+## Usage
 Put this in your `rollup.config.js`:
 ```js
 import { rollupConfig } from "@samual/rollup-config"
