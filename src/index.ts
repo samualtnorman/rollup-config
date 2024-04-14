@@ -13,7 +13,8 @@ import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
 
 export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist" }: LaxPartial<{ sourcePath: string; outPath: string }> = {}
+	{ sourcePath = "src", outPath = "dist", preserveModules = false }:
+		LaxPartial<{ sourcePath: string, outPath: string, preserveModules: boolean }> = {}
 ): Promise<RollupOptions> => ({
 	external: source => !(source.startsWith("/") || source.startsWith(".")),
 	input: Object.fromEntries(
@@ -24,7 +25,7 @@ export const rollupConfig = async (
 			)
 			.map(path => [ path.slice(sourcePath.length + 1, -3), path ])
 	),
-	output: { dir: outPath, preserveModules: true },
+	output: { dir: outPath, preserveModules },
 	plugins: [
 		babel({
 			babelHelpers: "bundled",
@@ -57,7 +58,7 @@ export const rollupConfig = async (
 		}),
 		json({ preferConst: true })
 	],
-	preserveEntrySignatures: "allow-extension",
+	preserveEntrySignatures: "strict",
 	strictDeprecations: true,
 	treeshake: { moduleSideEffects: false }
 })
