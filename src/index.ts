@@ -1,6 +1,7 @@
 import babelPresetEnv, { Options as BabelPresetEnvOptions } from "@babel/preset-env"
 import babelPresetTypescript from "@babel/preset-typescript"
 import { babel } from "@rollup/plugin-babel"
+import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import terser from "@rollup/plugin-terser"
 import type { LaxPartial } from "@samual/lib"
@@ -53,7 +54,8 @@ export const rollupConfig = async (
 			printWidth: 120,
 			semi: false,
 			trailingComma: "none"
-		})
+		}),
+		json({ preferConst: true })
 	],
 	preserveEntrySignatures: "allow-extension",
 	strictDeprecations: true,
