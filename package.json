@@ -50,7 +50,7 @@
 	},
 	"engines": {
 		"node": "^18 || >=20",
-		"pnpm": "^8.15.7"
+		"pnpm": "^9.0.4"
 	},
 	"private": true
 }
