@@ -9,6 +9,7 @@ import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
 import { babelPluginVitest } from "babel-plugin-vitest"
 import { cpus } from "os"
+import * as Path from "path"
 import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
 
@@ -16,7 +17,7 @@ export const rollupConfig = async (
 	{ sourcePath = "src", outPath = "dist", preserveModules = false }:
 		LaxPartial<{ sourcePath: string, outPath: string, preserveModules: boolean }> = {}
 ): Promise<RollupOptions> => ({
-	external: source => !(source.startsWith("/") || source.startsWith(".")),
+	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
 	input: Object.fromEntries(
 		(await findFiles(sourcePath))
 			.filter(path =>
