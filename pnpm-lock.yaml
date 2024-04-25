@@ -27,10 +27,10 @@ importers:
         specifier: ^0.4.4
         version: 0.4.4(rollup@4.16.4)
       '@samual/lib':
-        specifier: 0.10.1
+        specifier: ^0.10.1
         version: 0.10.1
       babel-plugin-here:
-        specifier: 1.0.1
+        specifier: ^1.0.1
         version: 1.0.1
       babel-plugin-vitest:
         specifier: ^0.0.0
@@ -40,7 +40,7 @@ importers:
         version: 4.1.1(prettier@3.2.5)(rollup@4.16.4)
     devDependencies:
       '@samual/rollup-config':
-        specifier: 0.0.2
+        specifier: ^0.0.2
         version: 0.0.2(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)
       '@total-typescript/ts-reset':
         specifier: ^0.5.1
