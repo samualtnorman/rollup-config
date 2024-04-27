@@ -27,8 +27,8 @@ importers:
         specifier: ^0.4.4
         version: 0.4.4(rollup@4.16.4)
       '@samual/lib':
-        specifier: ^0.10.1
-        version: 0.10.1
+        specifier: ^0.11.0
+        version: 0.11.0
       babel-plugin-here:
         specifier: ^1.0.1
         version: 1.0.1
@@ -822,6 +822,10 @@ packages:
 
   '@samual/lib@0.10.1':
     resolution: {integrity: sha512-DW+Cx3RwmvSUvtpcZd7NqUCu4kzCqn/Bs5Ybl4GQSn9XF4hPud+zaEuODNc+g2uLt2jH+8bYuANQGJMaDnSCZQ==}
+    engines: {node: ^18 || >=20}
+
+  '@samual/lib@0.11.0':
+    resolution: {integrity: sha512-O1rQWS3EHbMKUAfaD3qY/SxsYDarlDtNIeJjPvUZiLmO3eeNuVvEtcnKbvWdywIq0ttW6oS5Nmcsm3JkpDeGsQ==}
     engines: {node: ^18 || >=20}
 
   '@samual/rollup-config@0.1.0':
@@ -2018,6 +2022,8 @@ snapshots:
     optional: true
 
   '@samual/lib@0.10.1': {}
+
+  '@samual/lib@0.11.0': {}
 
   '@samual/rollup-config@0.1.0(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)':
     dependencies:
