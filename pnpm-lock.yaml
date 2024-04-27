@@ -40,8 +40,8 @@ importers:
         version: 4.1.1(prettier@3.2.5)(rollup@4.16.4)
     devDependencies:
       '@samual/rollup-config':
-        specifier: ^0.0.2
-        version: 0.0.2(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)
+        specifier: ^0.1.0
+        version: 0.1.0(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)
       '@total-typescript/ts-reset':
         specifier: ^0.5.1
         version: 0.5.1
@@ -824,8 +824,8 @@ packages:
     resolution: {integrity: sha512-DW+Cx3RwmvSUvtpcZd7NqUCu4kzCqn/Bs5Ybl4GQSn9XF4hPud+zaEuODNc+g2uLt2jH+8bYuANQGJMaDnSCZQ==}
     engines: {node: ^18 || >=20}
 
-  '@samual/rollup-config@0.0.2':
-    resolution: {integrity: sha512-YtHI0wNsnj+F3LZtzKAHbjtcEk+M4pd+TusakEYQIBy7Kr67Z/0OHcgHzD2cvacoy3wBI6HWJbn5wLLyiZ+B/w==}
+  '@samual/rollup-config@0.1.0':
+    resolution: {integrity: sha512-vXPH2C906T0ozJd/0aJwQl444t6KsyYpAFH8mcrbCx18kYuWygVBvaEHr6CzRMi707LsssJyF9fsLzICCaCLQw==}
     engines: {node: ^18 || >=20}
 
   '@total-typescript/ts-reset@0.5.1':
@@ -932,8 +932,8 @@ packages:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
     engines: {node: '>=0.3.1'}
 
-  electron-to-chromium@1.4.748:
-    resolution: {integrity: sha512-VWqjOlPZn70UZ8FTKUOkUvBLeTQ0xpty66qV0yJcAGY2/CthI4xyW9aEozRVtuwv3Kpf5xTesmJUcPwuJmgP4A==}
+  electron-to-chromium@1.4.750:
+    resolution: {integrity: sha512-9ItEpeu15hW5m8jKdriL+BQrgwDTXEL9pn4SkillWFu73ZNNNQ2BKKLS+ZHv2vC9UkNhosAeyfxOf/5OSeTCPA==}
 
   escalade@3.1.2:
     resolution: {integrity: sha512-ErCHMCae19vR8vQGe50xIsVomy19rg6gFu3+r3jkEO46suLMWBksvVyoGgQV+jOfl84ZSOSlmv6Gxa89PmTGmA==}
@@ -2019,11 +2019,12 @@ snapshots:
 
   '@samual/lib@0.10.1': {}
 
-  '@samual/rollup-config@0.0.2(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)':
+  '@samual/rollup-config@0.1.0(@babel/core@7.24.4)(prettier@3.2.5)(rollup@4.16.4)':
     dependencies:
       '@babel/preset-env': 7.24.4(@babel/core@7.24.4)
       '@babel/preset-typescript': 7.24.1(@babel/core@7.24.4)
       '@rollup/plugin-babel': 6.0.4(@babel/core@7.24.4)(rollup@4.16.4)
+      '@rollup/plugin-json': 6.1.0(rollup@4.16.4)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.16.4)
       '@rollup/plugin-terser': 0.4.4(rollup@4.16.4)
       '@samual/lib': 0.10.1
@@ -2095,7 +2096,7 @@ snapshots:
   browserslist@4.23.0:
     dependencies:
       caniuse-lite: 1.0.30001612
-      electron-to-chromium: 1.4.748
+      electron-to-chromium: 1.4.750
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -2133,7 +2134,7 @@ snapshots:
 
   diff@5.1.0: {}
 
-  electron-to-chromium@1.4.748: {}
+  electron-to-chromium@1.4.750: {}
 
   escalade@3.1.2: {}
 
