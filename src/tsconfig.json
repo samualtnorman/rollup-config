@@ -7,6 +7,6 @@
 		"strict": true,
 		"useUnknownInCatchVariables": true,
 		"strictNullChecks": true,
-		"target": "ES2021"
+		"target": "ES2022"
 	}
 }
