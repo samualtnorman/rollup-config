@@ -39,7 +39,7 @@
 		"rollup-plugin-prettier": "^4.1.1"
 	},
 	"devDependencies": {
-		"@samual/rollup-config": "^0.1.1",
+		"@samual/rollup-config": "0.1.2-600c453",
 		"@total-typescript/ts-reset": "^0.6.0",
 		"@types/babel__preset-env": "^7.9.7",
 		"@types/node": "~18.19.47",

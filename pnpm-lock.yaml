@@ -40,8 +40,8 @@ importers:
         version: 4.1.1(prettier@3.3.3)(rollup@4.21.1)
     devDependencies:
       '@samual/rollup-config':
-        specifier: ^0.1.1
-        version: 0.1.1(@babel/core@7.25.2)(prettier@3.3.3)(rollup@4.21.1)
+        specifier: 0.1.2-600c453
+        version: 0.1.2-600c453(@babel/core@7.25.2)(prettier@3.3.3)(rollup@4.21.1)
       '@total-typescript/ts-reset':
         specifier: ^0.6.0
         version: 0.6.0
@@ -824,9 +824,9 @@ packages:
     resolution: {integrity: sha512-O1rQWS3EHbMKUAfaD3qY/SxsYDarlDtNIeJjPvUZiLmO3eeNuVvEtcnKbvWdywIq0ttW6oS5Nmcsm3JkpDeGsQ==}
     engines: {node: ^18 || >=20}
 
-  '@samual/rollup-config@0.1.1':
-    resolution: {integrity: sha512-kVuMx660aYXxrWBeb9pKWFBOdfuVwcYanO5EH0ylris+bfnhbD1rFAQfqElI2ajyj9IdVPF2r63+LvXaXv8Iiw==}
-    engines: {node: ^18 || >=20}
+  '@samual/rollup-config@0.1.2-600c453':
+    resolution: {integrity: sha512-Bf76pgFzXlTl1fga6HbpHrLrXHyeOC4T6nCiataDawUUdJLtA+h8yANDNMcWnBJZGZLDpCLIXrSHAs7i7B1Zrw==}
+    engines: {node: ^18.20 || ^20.10 || >=22}
 
   '@total-typescript/ts-reset@0.6.0':
     resolution: {integrity: sha512-HWZnkM+5z3INAUZMohVXvX8/vm9sjmfmV2NRAswvv5WsU2m+OZsHAVZ0fl8xf2QH9kyPkinghVW6g3DOQ2xt5Q==}
@@ -2077,7 +2077,7 @@ snapshots:
 
   '@samual/lib@0.11.0': {}
 
-  '@samual/rollup-config@0.1.1(@babel/core@7.25.2)(prettier@3.3.3)(rollup@4.21.1)':
+  '@samual/rollup-config@0.1.2-600c453(@babel/core@7.25.2)(prettier@3.3.3)(rollup@4.21.1)':
     dependencies:
       '@babel/preset-env': 7.25.4(@babel/core@7.25.2)
       '@babel/preset-typescript': 7.24.7(@babel/core@7.25.2)
