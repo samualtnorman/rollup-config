@@ -1,7 +1,7 @@
 # Samual's Rollup Config
 An opinionated Rollup config.
 
-Requires Node.js 18, 20 or above.
+Requires Node.js 18.20+, 20.10+, 22.0+, or above.
 
 ## Install
 ```sh
