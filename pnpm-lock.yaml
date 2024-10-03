@@ -40,8 +40,8 @@ importers:
         version: 4.1.1(prettier@3.3.3)(rollup@4.24.0)
     devDependencies:
       '@samual/rollup-config':
-        specifier: 0.1.2-600c453
-        version: 0.1.2-600c453(@babel/core@7.25.7)(prettier@3.3.3)(rollup@4.24.0)
+        specifier: 0.1.2-369a175
+        version: 0.1.2-369a175(@babel/core@7.25.7)(prettier@3.3.3)(rollup@4.24.0)
       '@total-typescript/ts-reset':
         specifier: ^0.6.1
         version: 0.6.1
@@ -813,20 +813,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@samual/lib@0.10.1':
-    resolution: {integrity: sha512-DW+Cx3RwmvSUvtpcZd7NqUCu4kzCqn/Bs5Ybl4GQSn9XF4hPud+zaEuODNc+g2uLt2jH+8bYuANQGJMaDnSCZQ==}
-    engines: {node: ^18 || >=20}
-
-  '@samual/lib@0.11.0':
-    resolution: {integrity: sha512-O1rQWS3EHbMKUAfaD3qY/SxsYDarlDtNIeJjPvUZiLmO3eeNuVvEtcnKbvWdywIq0ttW6oS5Nmcsm3JkpDeGsQ==}
-    engines: {node: ^18 || >=20}
-
   '@samual/lib@0.12.1-5bd9e27':
     resolution: {integrity: sha512-ui1v7WiRp/p3rPQSgaV2+ACWbDlP+ZMNCHGzbmL2EC9C5y70DTyMToAKgoTRZsLmSoFfzsYcYT/SaXtlbyAe4g==}
     engines: {node: ^18.20 || ^20.10 || >=22}
 
-  '@samual/rollup-config@0.1.2-600c453':
-    resolution: {integrity: sha512-Bf76pgFzXlTl1fga6HbpHrLrXHyeOC4T6nCiataDawUUdJLtA+h8yANDNMcWnBJZGZLDpCLIXrSHAs7i7B1Zrw==}
+  '@samual/rollup-config@0.1.2-369a175':
+    resolution: {integrity: sha512-i4WoVyhBXKGsZZxgnSuIrUuj5Ws/vzhJu+ChgSDZrit0YpxcP3rp5SOuriwkfEj6XZsxhwti0kXpjv7ByGYlXw==}
     engines: {node: ^18.20 || ^20.10 || >=22}
 
   '@total-typescript/ts-reset@0.6.1':
@@ -859,9 +851,6 @@ packages:
   ansi-styles@3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
     engines: {node: '>=4'}
-
-  babel-plugin-here@1.0.1:
-    resolution: {integrity: sha512-hbf0ZCJHrolCG6j4HbF6Fz0MSR+BQLPwBtQdEAie/+NI5PW5Dd9269oIAA1pQlo3t91lqPMU5dBFlOoPkofytQ==}
 
   babel-plugin-here@1.0.2-87a5573:
     resolution: {integrity: sha512-E7UWre/+qD6VFEKmKuuIupfvZaySVVgd0MSgF6Z+kW+eFUVOufP6eNDI7+n+jyX3bxvAUvXjaoAGrRfk7/wELQ==}
@@ -2065,13 +2054,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
 
-  '@samual/lib@0.10.1': {}
-
-  '@samual/lib@0.11.0': {}
-
   '@samual/lib@0.12.1-5bd9e27': {}
 
-  '@samual/rollup-config@0.1.2-600c453(@babel/core@7.25.7)(prettier@3.3.3)(rollup@4.24.0)':
+  '@samual/rollup-config@0.1.2-369a175(@babel/core@7.25.7)(prettier@3.3.3)(rollup@4.24.0)':
     dependencies:
       '@babel/preset-env': 7.25.7(@babel/core@7.25.7)
       '@babel/preset-typescript': 7.25.7(@babel/core@7.25.7)
@@ -2079,8 +2064,8 @@ snapshots:
       '@rollup/plugin-json': 6.1.0(rollup@4.24.0)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@4.24.0)
       '@rollup/plugin-terser': 0.4.4(rollup@4.24.0)
-      '@samual/lib': 0.11.0
-      babel-plugin-here: 1.0.1
+      '@samual/lib': 0.12.1-5bd9e27
+      babel-plugin-here: 1.0.2-87a5573
       babel-plugin-vitest: 0.0.0
       rollup-plugin-prettier: 4.1.1(prettier@3.3.3)(rollup@4.24.0)
     transitivePeerDependencies:
@@ -2113,11 +2098,6 @@ snapshots:
   ansi-styles@3.2.1:
     dependencies:
       color-convert: 1.9.3
-
-  babel-plugin-here@1.0.1:
-    dependencies:
-      '@babel/types': 7.25.7
-      '@samual/lib': 0.10.1
 
   babel-plugin-here@1.0.2-87a5573:
     dependencies:
