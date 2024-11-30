@@ -52,7 +52,6 @@ export const rollupConfig = async (
 			useTabs: true,
 			tabWidth: 4,
 			arrowParens: "avoid",
-			experimentalTernaries: true,
 			printWidth: 120,
 			semi: false,
 			trailingComma: "none"
