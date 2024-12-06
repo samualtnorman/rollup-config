@@ -30,8 +30,8 @@ type Options = LaxPartial<{
 	sourcePath: string
 
 	/**
-	 * Override any rollup option.
-	 * @see [Official Rollup Docs.](https://rollupjs.org/configuration-options/)
+	 * Override any Rollup options.
+	 * @see [Official Rollup docs.](https://rollupjs.org/configuration-options/)
 	 *
 	 * @example
 	 * ```ts
@@ -45,8 +45,8 @@ type Options = LaxPartial<{
 	rollupOptions: RollupOptions
 
 	/**
-	 * Override any babel option.
-	 * @see [Official Babel Docs.](https://babeljs.io/docs/options)
+	 * Override any Babel options.
+	 * @see [Official Babel docs.](https://babeljs.io/docs/options)
 	 */
 	babelOptions: RollupBabelInputPluginOptions
 
