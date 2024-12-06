@@ -14,9 +14,16 @@ import * as Path from "path"
 import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
 
+type Options = LaxPartial<{
+	sourcePath: string
+	outPath: string
+	preserveModules: boolean
+	rollupOptions: RollupOptions
+}>
+
 export const rollupConfig = async (
 	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {} }:
-		LaxPartial<{ sourcePath: string, outPath: string, preserveModules: boolean, rollupOptions: RollupOptions }> = {}
+		Options = {}
 ): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
 	input: Object.fromEntries(
