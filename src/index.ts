@@ -1,6 +1,6 @@
 import babelPresetEnv, { Options as BabelPresetEnvOptions } from "@babel/preset-env"
 import babelPresetTypescript from "@babel/preset-typescript"
-import { babel } from "@rollup/plugin-babel"
+import { babel, type RollupBabelInputPluginOptions } from "@rollup/plugin-babel"
 import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import terser from "@rollup/plugin-terser"
@@ -43,6 +43,12 @@ type Options = LaxPartial<{
 	 * ```
 	 */
 	rollupOptions: RollupOptions
+
+	/**
+	 * Override any babel option.
+	 * @see [Official Babel Docs.](https://babeljs.io/docs/options)
+	 */
+	babelOptions: RollupBabelInputPluginOptions
 
 	/**
 	 * @deprecated Use {@linkcode Options.rollupOptions rollupOptions} [`output.dir`](
@@ -88,7 +94,7 @@ type Options = LaxPartial<{
  * ```
  */
 export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {} }:
+	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {}, babelOptions }:
 		Options = {}
 ): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
@@ -102,7 +108,7 @@ export const rollupConfig = async (
 	),
 	output: { dir: outPath, preserveModules },
 	plugins: [
-		babel({
+		babel(defu(babelOptions, {
 			babelHelpers: "bundled",
 			extensions: [ ".ts" ],
 			presets: [
@@ -113,7 +119,7 @@ export const rollupConfig = async (
 				[ babelPresetTypescript, { allowDeclareFields: true, optimizeConstEnums: true } ]
 			],
 			plugins: [ babelPluginHere(), babelPluginVitest() ]
-		}),
+		} satisfies RollupBabelInputPluginOptions)),
 		nodeResolve({ extensions: [ ".ts" ] }),
 		terser({
 			compress: { passes: Infinity, unsafe: true, sequences: false },
