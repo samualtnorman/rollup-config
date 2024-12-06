@@ -8,15 +8,16 @@ import type { LaxPartial } from "@samual/lib"
 import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
 import { babelPluginVitest } from "babel-plugin-vitest"
+import { defu } from "defu"
 import { cpus } from "os"
 import * as Path from "path"
 import type { RollupOptions } from "rollup"
 import prettier from "rollup-plugin-prettier"
 
 export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist", preserveModules = false }:
-		LaxPartial<{ sourcePath: string, outPath: string, preserveModules: boolean }> = {}
-): Promise<RollupOptions> => ({
+	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {} }:
+		LaxPartial<{ sourcePath: string, outPath: string, preserveModules: boolean, rollupOptions: RollupOptions }> = {}
+): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
 	input: Object.fromEntries(
 		(await findFiles(sourcePath))
@@ -61,4 +62,4 @@ export const rollupConfig = async (
 	preserveEntrySignatures: "strict",
 	strictDeprecations: true,
 	treeshake: { moduleSideEffects: false }
-})
+} satisfies RollupOptions)

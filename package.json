@@ -36,6 +36,7 @@
 		"@samual/lib": "^0.13.0",
 		"babel-plugin-here": "^1.0.0",
 		"babel-plugin-vitest": "^0.0.0",
+		"defu": "^6.0.0",
 		"rollup-plugin-prettier": "^4.0.0"
 	},
 	"devDependencies": {
@@ -52,5 +53,10 @@
 		"node": "^18.20 || ^20.10 || >=22",
 		"pnpm": "^9"
 	},
-	"private": true
+	"private": true,
+	"pnpm": {
+		"patchedDependencies": {
+			"defu": "patches/defu.patch"
+		}
+	}
 }

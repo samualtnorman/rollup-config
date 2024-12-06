@@ -1,0 +1,14 @@
+diff --git a/package.json b/package.json
+index 674fa194f7aabc8df9b70a6c0d341868295dc870..9f380745ba0b973540415f60e5a4731c4ce9d4ff 100644
+--- a/package.json
++++ b/package.json
+@@ -7,7 +7,8 @@
+   "exports": {
+     ".": {
+       "require": "./dist/defu.cjs",
+-      "import": "./dist/defu.mjs"
++      "import": "./dist/defu.mjs",
++      "types": "./dist/defu.d.ts"
+     }
+   },
+   "main": "./dist/defu.cjs",

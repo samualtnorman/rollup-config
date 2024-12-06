@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  defu:
+    hash: cicoyi3phzfbpthlnkbyvidbka
+    path: patches/defu.patch
+
 importers:
 
   .:
@@ -35,6 +40,9 @@ importers:
       babel-plugin-vitest:
         specifier: ^0.0.0
         version: 0.0.0
+      defu:
+        specifier: ^6.0.0
+        version: 6.0.1(patch_hash=cicoyi3phzfbpthlnkbyvidbka)
       rollup-plugin-prettier:
         specifier: ^4.0.0
         version: 4.0.0(prettier@3.3.3)(rollup@4.24.2)
@@ -948,6 +956,9 @@ packages:
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
+
+  defu@6.0.1:
+    resolution: {integrity: sha512-rZrZJDGZkdmVhFer2Q7ItCOcpPaAU8nDvDOBHTJNiYkvgvUeomBkJTuzRKNQoWgXUFJLx1tDhp3lqdS/twWUdw==}
 
   diff@5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
@@ -2272,6 +2283,8 @@ snapshots:
       ms: 2.1.3
 
   deepmerge@4.3.1: {}
+
+  defu@6.0.1(patch_hash=cicoyi3phzfbpthlnkbyvidbka): {}
 
   diff@5.1.0: {}
 
