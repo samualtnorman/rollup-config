@@ -100,7 +100,7 @@ type Options = LaxPartial<{
  * ```
  */
 export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {}, babelOptions, terserOptions }:
+	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions, babelOptions, terserOptions }:
 		Options = {}
 ): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
