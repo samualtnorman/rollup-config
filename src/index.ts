@@ -3,7 +3,7 @@ import babelPresetTypescript from "@babel/preset-typescript"
 import { babel, type RollupBabelInputPluginOptions } from "@rollup/plugin-babel"
 import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
-import terser from "@rollup/plugin-terser"
+import terser, { type Options as TerserOptions } from "@rollup/plugin-terser"
 import type { LaxPartial } from "@samual/lib"
 import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
@@ -51,6 +51,12 @@ type Options = LaxPartial<{
 	babelOptions: RollupBabelInputPluginOptions
 
 	/**
+	 * Override any Terser options.
+	 * @see [Official Terser docs.](https://terser.org/docs/options/)
+	 */
+	terserOptions: TerserOptions
+
+	/**
 	 * @deprecated Use {@linkcode Options.rollupOptions rollupOptions} [`output.dir`](
 	 * https://rollupjs.org/configuration-options/#output-dir) instead.
 	 */
@@ -94,7 +100,7 @@ type Options = LaxPartial<{
  * ```
  */
 export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {}, babelOptions }:
+	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions = {}, babelOptions, terserOptions }:
 		Options = {}
 ): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
@@ -121,12 +127,12 @@ export const rollupConfig = async (
 			plugins: [ babelPluginHere(), babelPluginVitest() ]
 		} satisfies RollupBabelInputPluginOptions)),
 		nodeResolve({ extensions: [ ".ts" ] }),
-		terser({
+		terser(defu(terserOptions, {
 			compress: { passes: Infinity, unsafe: true, sequences: false },
 			maxWorkers: Math.floor(cpus().length / 2),
 			mangle: false,
 			ecma: 2020
-		}),
+		} satisfies TerserOptions)),
 		prettier({
 			parser: "espree",
 			useTabs: true,
