@@ -12,7 +12,7 @@ import { defu } from "defu"
 import { cpus } from "os"
 import * as Path from "path"
 import type { RollupOptions } from "rollup"
-import prettier from "rollup-plugin-prettier"
+import prettier, { type Options as PrettierOptions } from "rollup-plugin-prettier"
 
 type Options = LaxPartial<{
 	/**
@@ -57,6 +57,12 @@ type Options = LaxPartial<{
 	terserOptions: TerserOptions
 
 	/**
+	 * Override any Prettier options.
+	 * @see [Official Prettier docs.](https://prettier.io/docs/en/options)
+	 */
+	prettierOptions: PrettierOptions
+
+	/**
 	 * @deprecated Use {@linkcode Options.rollupOptions rollupOptions} [`output.dir`](
 	 * https://rollupjs.org/configuration-options/#output-dir) instead.
 	 */
@@ -99,10 +105,15 @@ type Options = LaxPartial<{
  * export default rollupConfig()
  * ```
  */
-export const rollupConfig = async (
-	{ sourcePath = "src", outPath = "dist", preserveModules = false, rollupOptions, babelOptions, terserOptions }:
-		Options = {}
-): Promise<RollupOptions> => defu(rollupOptions, {
+export const rollupConfig = async ({
+	sourcePath = "src",
+	outPath = "dist",
+	preserveModules = false,
+	rollupOptions,
+	babelOptions,
+	terserOptions,
+	prettierOptions
+}: Options = {}): Promise<RollupOptions> => defu(rollupOptions, {
 	external: source => !(Path.isAbsolute(source) || source.startsWith(".")),
 	input: Object.fromEntries(
 		(await findFiles(sourcePath))
@@ -133,7 +144,7 @@ export const rollupConfig = async (
 			mangle: false,
 			ecma: 2020
 		} satisfies TerserOptions)),
-		prettier({
+		prettier(defu(prettierOptions, {
 			parser: "espree",
 			useTabs: true,
 			tabWidth: 4,
@@ -141,7 +152,7 @@ export const rollupConfig = async (
 			printWidth: 120,
 			semi: false,
 			trailingComma: "none"
-		}),
+		} satisfies PrettierOptions)),
 		json({ preferConst: true })
 	],
 	preserveEntrySignatures: "strict",
