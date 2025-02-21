@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   defu:
-    hash: cicoyi3phzfbpthlnkbyvidbka
+    hash: 1780f4e4f74b651ece75ec841000d9c155607e01b328efc91c4f39fb5f1c3e7c
     path: patches/defu.patch
 
 importers:
@@ -42,7 +42,7 @@ importers:
         version: 0.0.0
       defu:
         specifier: ^6.0.0
-        version: 6.0.1(patch_hash=cicoyi3phzfbpthlnkbyvidbka)
+        version: 6.0.1(patch_hash=1780f4e4f74b651ece75ec841000d9c155607e01b328efc91c4f39fb5f1c3e7c)
       rollup-plugin-prettier:
         specifier: ^4.0.0
         version: 4.0.0(prettier@3.3.3)(rollup@4.24.2)
@@ -2284,7 +2284,7 @@ snapshots:
 
   deepmerge@4.3.1: {}
 
-  defu@6.0.1(patch_hash=cicoyi3phzfbpthlnkbyvidbka): {}
+  defu@6.0.1(patch_hash=1780f4e4f74b651ece75ec841000d9c155607e01b328efc91c4f39fb5f1c3e7c): {}
 
   diff@5.1.0: {}
 
