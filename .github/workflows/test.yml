@@ -8,11 +8,12 @@ jobs:
 
     steps:
     - { name: Checkout, uses: actions/checkout@v4 }
+    - { name: Setup pnpm, uses: pnpm/action-setup@v4, with: { version: ^10, run_install: true } }
 
     - name: Setup Node.js ${{matrix.node-version}} environment
       uses: actions/setup-node@v4
-      with: { node-version: "${{matrix.node-version}}" }
+      with: { node-version: "${{matrix.node-version}}", registry-url: 'https://registry.npmjs.org', cache: pnpm }
 
-    - { name: Setup pnpm, uses: pnpm/action-setup@v4, with: { version: ^9, run_install: true } }
-    - run: pnpm package
-    - run: pnpm lint
+    - run: echo $PWD/node_modules/.bin:$PATH > $GITHUB_PATH
+    - run: scripts/package.sh
+    - run: scripts/test.sh

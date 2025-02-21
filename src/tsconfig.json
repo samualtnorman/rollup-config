@@ -7,6 +7,9 @@
 		"strict": true,
 		"useUnknownInCatchVariables": true,
 		"strictNullChecks": true,
-		"target": "ES2022"
+		"target": "ES2022",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "../dist"
 	}
 }

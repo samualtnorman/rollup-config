@@ -20,12 +20,6 @@
 		"./*.js": "./*.js"
 	},
 	"repository": "github:samualtnorman/rollup-config",
-	"scripts": {
-		"build": "./rollup.config.js",
-		"emit-declarations": "tsc --project src --declaration --emitDeclarationOnly --noEmit false --outDir dist",
-		"package": "rm -rf dist && pnpm build && pnpm emit-declarations && scripts/emit-package-json.js && cp license readme.md dist",
-		"lint": "tsc && tsc --project src"
-	},
 	"dependencies": {
 		"@babel/preset-env": "^7.0.0",
 		"@babel/preset-typescript": "^7.0.0",
