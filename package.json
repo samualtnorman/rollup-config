@@ -33,14 +33,14 @@
 		"@rollup/plugin-json": "^6.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.0",
 		"@rollup/plugin-terser": "^0.4.0",
-		"@samual/lib": "^0.13.0",
-		"babel-plugin-here": "^1.0.0",
-		"babel-plugin-vitest": "^0.0.0",
+		"@samual/lib": "0.13.1-4031e7a",
+		"babel-plugin-here": "1.0.3-c2540da",
+		"babel-plugin-vitest": "0.0.1-7dc1dde",
 		"defu": "^6.0.0",
 		"rollup-plugin-prettier": "^4.0.0"
 	},
 	"devDependencies": {
-		"@samual/rollup-config": "^0.1.2",
+		"@samual/rollup-config": "0.1.3-858c2de",
 		"@total-typescript/ts-reset": "^0.6.1",
 		"@types/babel__preset-env": "^7.9.7",
 		"@types/node": "~18.19.67",

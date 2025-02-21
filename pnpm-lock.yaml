@@ -32,14 +32,14 @@ importers:
         specifier: ^0.4.0
         version: 0.4.4(rollup@4.24.2)
       '@samual/lib':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: 0.13.1-4031e7a
+        version: 0.13.1-4031e7a
       babel-plugin-here:
-        specifier: ^1.0.0
-        version: 1.0.2
+        specifier: 1.0.3-c2540da
+        version: 1.0.3-c2540da
       babel-plugin-vitest:
-        specifier: ^0.0.0
-        version: 0.0.0
+        specifier: 0.0.1-7dc1dde
+        version: 0.0.1-7dc1dde
       defu:
         specifier: ^6.0.0
         version: 6.0.1(patch_hash=1780f4e4f74b651ece75ec841000d9c155607e01b328efc91c4f39fb5f1c3e7c)
@@ -48,8 +48,8 @@ importers:
         version: 4.0.0(prettier@3.3.3)(rollup@4.24.2)
     devDependencies:
       '@samual/rollup-config':
-        specifier: ^0.1.2
-        version: 0.1.2(@babel/core@7.26.0)(prettier@3.3.3)(rollup@4.24.2)
+        specifier: 0.1.3-858c2de
+        version: 0.1.3-858c2de(@babel/core@7.26.0)(prettier@3.3.3)(rollup@4.24.2)
       '@total-typescript/ts-reset':
         specifier: ^0.6.1
         version: 0.6.1
@@ -867,8 +867,12 @@ packages:
     resolution: {integrity: sha512-5uUTQaWsuK0110a0voLpiHn4S+fkGd9s2EkKFg6JGfAP8m9UFmMf55wqw5ycypjhHqLgn6sdZDSKCyeQeVEbdA==}
     engines: {node: ^18.20 || ^20.10 || >=22}
 
-  '@samual/rollup-config@0.1.2':
-    resolution: {integrity: sha512-UVmGQ3wTGPXxqozn7aFqfhzMPoD6ASbu5X5IsRxVDC6uwM4Cd/llDETHalM2sriYr0Me/CxTSuJkeDIKtPfPBA==}
+  '@samual/lib@0.13.1-4031e7a':
+    resolution: {integrity: sha512-/JRovXM3eGw+0M3tm2NfIllPfrMFDepxAYEBfENd1jlp8UX1sdJS+iy+h4HiUiyhSHZUxZTi7zTseICumHQHTQ==}
+    engines: {node: ^18.20 || ^20.10 || >=22}
+
+  '@samual/rollup-config@0.1.3-858c2de':
+    resolution: {integrity: sha512-QwMk8abk5Zx29fM92CdK7/4YU/25+lDAe6EZuInFwn8kKVMINDW+LyI5GfsWlsAEXGXWUzazSyafM9f3aXkulw==}
     engines: {node: ^18.20 || ^20.10 || >=22}
 
   '@total-typescript/ts-reset@0.6.1':
@@ -901,6 +905,9 @@ packages:
   babel-plugin-here@1.0.2:
     resolution: {integrity: sha512-t45FblS+jfHZ8HM8mHAloUUgQfzoyqMtExNIJH+7zyDytMfu/CP9IOCnRQeem1C3tBeEUq6uU2aOmNXYS293bA==}
 
+  babel-plugin-here@1.0.3-c2540da:
+    resolution: {integrity: sha512-52UeCO5k282aDlTePyPLBc9hEx9uFmotXCmIcK97aOqxmxFVU4vr7xMgl44GnEFzd0AQmMLQXtmqmwNRKdAsfA==}
+
   babel-plugin-polyfill-corejs2@0.4.11:
     resolution: {integrity: sha512-sMEJ27L0gRHShOh5G54uAAPaiCOygY/5ratXuiyb2G46FmlSpc9eFCzYVyDiPxfNbwzA7mYahmjQc5q+CZQ09Q==}
     peerDependencies:
@@ -919,6 +926,10 @@ packages:
   babel-plugin-vitest@0.0.0:
     resolution: {integrity: sha512-Sd319TUmXTYpw13V12e1hzdJSuMeXAkHRru7HI4SWyMi+J+xfhVGEN+Uxd9Hi3j3dSrIv0xdYvm78uKf6RpThQ==}
     engines: {node: ^18 || >=20}
+
+  babel-plugin-vitest@0.0.1-7dc1dde:
+    resolution: {integrity: sha512-pBrCvAEddVcZVmD3jBpuNqczX04gvIFVkG1s4kjIUmt0fYhG+feL7k+aXFpAmugMo9aG1lXrgwpjFWj3oh+1qQ==}
+    engines: {node: ^18.20 || ^20.10 || >=22}
 
   browserslist@4.24.2:
     resolution: {integrity: sha512-ZIc+Q62revdMcqC6aChtW4jz3My3klmCO1fEmINZY/8J3EpBg5/A/D0AKmBveUh6pgoeycoMkVMko84tuYS+Gg==}
@@ -2185,7 +2196,9 @@ snapshots:
 
   '@samual/lib@0.13.0': {}
 
-  '@samual/rollup-config@0.1.2(@babel/core@7.26.0)(prettier@3.3.3)(rollup@4.24.2)':
+  '@samual/lib@0.13.1-4031e7a': {}
+
+  '@samual/rollup-config@0.1.3-858c2de(@babel/core@7.26.0)(prettier@3.3.3)(rollup@4.24.2)':
     dependencies:
       '@babel/preset-env': 7.26.0(@babel/core@7.26.0)
       '@babel/preset-typescript': 7.26.0(@babel/core@7.26.0)
@@ -2196,6 +2209,7 @@ snapshots:
       '@samual/lib': 0.13.0
       babel-plugin-here: 1.0.2
       babel-plugin-vitest: 0.0.0
+      defu: 6.0.1(patch_hash=1780f4e4f74b651ece75ec841000d9c155607e01b328efc91c4f39fb5f1c3e7c)
       rollup-plugin-prettier: 4.1.1(prettier@3.3.3)(rollup@4.24.2)
     transitivePeerDependencies:
       - '@babel/core'
@@ -2229,6 +2243,11 @@ snapshots:
       '@babel/types': 7.26.3
       '@samual/lib': 0.13.0
 
+  babel-plugin-here@1.0.3-c2540da:
+    dependencies:
+      '@babel/types': 7.26.3
+      '@samual/lib': 0.13.0
+
   babel-plugin-polyfill-corejs2@0.4.11(@babel/core@7.26.0):
     dependencies:
       '@babel/compat-data': 7.26.0
@@ -2255,7 +2274,11 @@ snapshots:
 
   babel-plugin-vitest@0.0.0:
     dependencies:
-      '@babel/types': 7.26.0
+      '@babel/types': 7.26.3
+
+  babel-plugin-vitest@0.0.1-7dc1dde:
+    dependencies:
+      '@babel/types': 7.26.3
 
   browserslist@4.24.2:
     dependencies:
