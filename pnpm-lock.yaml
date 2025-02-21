@@ -35,8 +35,8 @@ importers:
         specifier: 0.13.1-4031e7a
         version: 0.13.1-4031e7a
       babel-plugin-here:
-        specifier: 1.0.3-c2540da
-        version: 1.0.3-c2540da
+        specifier: 1.0.3-ac850f7
+        version: 1.0.3-ac850f7
       babel-plugin-vitest:
         specifier: 0.0.1-7dc1dde
         version: 0.0.1-7dc1dde
@@ -905,8 +905,8 @@ packages:
   babel-plugin-here@1.0.2:
     resolution: {integrity: sha512-t45FblS+jfHZ8HM8mHAloUUgQfzoyqMtExNIJH+7zyDytMfu/CP9IOCnRQeem1C3tBeEUq6uU2aOmNXYS293bA==}
 
-  babel-plugin-here@1.0.3-c2540da:
-    resolution: {integrity: sha512-52UeCO5k282aDlTePyPLBc9hEx9uFmotXCmIcK97aOqxmxFVU4vr7xMgl44GnEFzd0AQmMLQXtmqmwNRKdAsfA==}
+  babel-plugin-here@1.0.3-ac850f7:
+    resolution: {integrity: sha512-tDwH9UHbPtXsMjWr++dZpHNxt1ojSKpcTOry34EXOMXfc03uyhrp1CJbIDCuX8ivigPE9uuN+c70IYKMsjqbdg==}
 
   babel-plugin-polyfill-corejs2@0.4.11:
     resolution: {integrity: sha512-sMEJ27L0gRHShOh5G54uAAPaiCOygY/5ratXuiyb2G46FmlSpc9eFCzYVyDiPxfNbwzA7mYahmjQc5q+CZQ09Q==}
@@ -2243,10 +2243,10 @@ snapshots:
       '@babel/types': 7.26.3
       '@samual/lib': 0.13.0
 
-  babel-plugin-here@1.0.3-c2540da:
+  babel-plugin-here@1.0.3-ac850f7:
     dependencies:
       '@babel/types': 7.26.3
-      '@samual/lib': 0.13.0
+      '@samual/lib': 0.13.1-4031e7a
 
   babel-plugin-polyfill-corejs2@0.4.11(@babel/core@7.26.0):
     dependencies:

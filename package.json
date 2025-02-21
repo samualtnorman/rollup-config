@@ -28,7 +28,7 @@
 		"@rollup/plugin-node-resolve": "^15.0.0",
 		"@rollup/plugin-terser": "^0.4.0",
 		"@samual/lib": "0.13.1-4031e7a",
-		"babel-plugin-here": "1.0.3-c2540da",
+		"babel-plugin-here": "1.0.3-ac850f7",
 		"babel-plugin-vitest": "0.0.1-7dc1dde",
 		"defu": "^6.0.0",
 		"rollup-plugin-prettier": "^4.0.0"
