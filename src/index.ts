@@ -5,6 +5,7 @@ import json from "@rollup/plugin-json"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import terser, { type Options as TerserOptions } from "@rollup/plugin-terser"
 import type { LaxPartial } from "@samual/lib"
+import { ensure } from "@samual/lib/assert"
 import { findFiles } from "@samual/lib/findFiles"
 import { babelPluginHere } from "babel-plugin-here"
 import { babelPluginVitest } from "babel-plugin-vitest"
@@ -144,6 +145,29 @@ export const rollupConfig = async ({
 			mangle: false,
 			ecma: 2020
 		} satisfies TerserOptions)),
+		{
+			name: `no-side-effects`,
+			async renderChunk(code) {
+				const ast = ensure(await parseAsync(code, { plugins: [ babelPluginSyntaxTypescript ] }))
+				const indexes: number[] = []
+
+				traverse(ast, {
+					Function(path) {
+						if (path.node.loc && !path.node.type.endsWith(`Method`) && (!path.isExpression() || path.parentPath.node.type == `VariableDeclarator`) && path.isPure()) {
+							indexes.push(path.node.loc.start.index)
+							// console.debug(path.toString())
+						}
+					}
+				})
+
+				indexes.sort((a, b) => b - a)
+
+				for (const index of indexes)
+					code = `${code.slice(0, index)}/*@__NO_SIDE_EFFECTS__*/${code.slice(index)}`
+
+				return code
+			}
+		},
 		prettier(defu(prettierOptions, {
 			parser: "espree",
 			useTabs: true,
