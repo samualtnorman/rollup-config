@@ -27,7 +27,7 @@
 		"@babel/preset-typescript": "^7.0.0",
 		"@rollup/plugin-babel": "^6.0.0",
 		"@rollup/plugin-json": "^6.0.0",
-		"@rollup/plugin-node-resolve": "^15.0.0",
+		"@rollup/plugin-node-resolve": "^16.0.1",
 		"@rollup/plugin-terser": "^0.4.0",
 		"@samual/lib": "0.13.1-4031e7a",
 		"babel-plugin-here": "1.0.3-ac850f7",
