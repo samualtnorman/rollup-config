@@ -1,3 +1,5 @@
+import { parseAsync, traverse } from "@babel/core"
+import babelPluginSyntaxTypescript from "@babel/plugin-syntax-typescript"
 import babelPresetEnv, { Options as BabelPresetEnvOptions } from "@babel/preset-env"
 import babelPresetTypescript from "@babel/preset-typescript"
 import { babel, type RollupBabelInputPluginOptions } from "@rollup/plugin-babel"
