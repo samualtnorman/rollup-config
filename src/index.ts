@@ -134,7 +134,7 @@ export const rollupConfig = async ({
 			presets: [
 				[
 					babelPresetEnv,
-					{ targets: { node: "18.20" } } satisfies BabelPresetEnvOptions
+					{ targets: { node: "20.10" } } satisfies BabelPresetEnvOptions
 				],
 				[ babelPresetTypescript, { allowDeclareFields: true, optimizeConstEnums: true } ]
 			],
