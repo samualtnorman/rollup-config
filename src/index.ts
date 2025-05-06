@@ -157,7 +157,6 @@ export const rollupConfig = async ({
 					Function(path) {
 						if (path.node.loc && !path.node.type.endsWith(`Method`) && (!path.isExpression() || path.parentPath.node.type == `VariableDeclarator`) && path.isPure()) {
 							indexes.push(path.node.loc.start.index)
-							// console.debug(path.toString())
 						}
 					}
 				})
